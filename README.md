@@ -60,7 +60,7 @@ function onSubmit() {
   cartAjax.addParam("portalCartData", portal_cart);
   cartAjax.getXMLAnswer(answer => {
       try {
-        // Handle an empty response
+        // Handle an empty/false response
         if (!answer) {
           g_form.addErrorMessage("An error occurred while processing request. Please try again.");
           return;
